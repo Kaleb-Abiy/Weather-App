@@ -1,0 +1,55 @@
+body {
+    background-color: antiquewhite;
+}
+
+.card {
+    text-align: center;
+    margin-top: 150px;
+}
+
+
+.card__info {
+    border: 5px;
+    border-style: solid;
+    border-color : black;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.country__info {
+    display: inline-flex !important;
+}
+
+.country__info img {
+    object-fit: contain;
+    margin-left: 10px;
+}    
+
+.temp__info {
+    width: auto;
+    margin: auto;
+    font-size: 30px;
+}
+
+.desc__info {
+    display: inline-flex;
+}
+
+.desc__info img {
+    object-fit: contain;
+}
+
+.form__style button {
+    width: 100px;
+    background-color: black;
+    color: aliceblue;
+    cursor:pointer;
+}
+
+
+.form__style button:hover {
+    background-color: aliceblue;
+    color: black;
+    cursor:pointer;
+}
+

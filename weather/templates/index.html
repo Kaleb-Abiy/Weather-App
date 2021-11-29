@@ -1,0 +1,41 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Hello Welcome to Kaleb's Weather App</h1>
+      <div class="card__info">
+         <div class="form__style">
+          <form method="POST">
+              {% csrf_token %}
+          <h4>Enter City here</h4>
+          <input type="text" name="city">
+          <button type="submit">Search</button>
+          </form>
+         </div>
+        <div class="country__info">
+          <h1>{{city}}</h1>
+          <img class= "flag" src="http://openweathermap.org/images/flags/{{country}}.png" alt="">
+        </div>
+        
+        <div class="temp__info">
+          <span>{{main}}{% if main %} &#8451;</span>{% endif %}
+        </div>
+      <div class="desc__info">
+        <h1>{{desc}}</h1> 
+        <img src="http://openweathermap.org/img/wn/{{icon}}.png" alt="">
+      </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
